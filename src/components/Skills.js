@@ -86,24 +86,27 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="section" style={{ padding: '5rem 0', position: 'relative' }}>
+      <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="text-center mb-16"
+          className="text-center"
+          style={{ marginBottom: '4rem' }}
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-white"
+            style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem' }}
           >
             Мои <span className="gradient-text">навыки</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-gray-300"
+            style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}
           >
             Технологии и инструменты, которые я использую для создания качественных решений
           </motion.p>

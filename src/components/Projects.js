@@ -175,21 +175,51 @@ const Projects = () => {
           {/* Filter Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-4"
+            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}
           >
             {filters.map((filter) => (
               <motion.button
                 key={filter.id}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'glass text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-10'
-                }`}
+                className={activeFilter === filter.id ? "btn btn-primary" : "btn btn-outline"}
+                style={{ 
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '9999px',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  minWidth: '140px',
+                  background: activeFilter === filter.id 
+                    ? 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)'
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: activeFilter === filter.id 
+                    ? 'none'
+                    : '1px solid rgba(255, 255, 255, 0.2)',
+                  color: 'white',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: activeFilter === filter.id 
+                    ? '0 8px 25px rgba(59, 130, 246, 0.3)'
+                    : '0 4px 15px rgba(0, 0, 0, 0.1)'
+                }}
               >
-                {filter.name}
+                <span style={{ position: 'relative', zIndex: 2 }}>
+                  {filter.name}
+                </span>
+                {activeFilter === filter.id && (
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '100%' }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                    style={{ zIndex: 1 }}
+                  />
+                )}
               </motion.button>
             ))}
           </motion.div>
