@@ -44,7 +44,7 @@ const Header = () => {
       }`}
     >
       <nav className="container" style={{ width: '100%' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '1.5rem 0' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', padding: '0.75rem 0' }}>
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -52,17 +52,17 @@ const Header = () => {
             style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}
           >
             <div className="gradient-text" style={{ 
-              width: '60px', 
-              height: '60px', 
-              borderRadius: '12px', 
+              width: '45px', 
+              height: '45px', 
+              borderRadius: '10px', 
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff6b6b 100%)'
             }}>
-              <span className="text-white" style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>ИВ</span>
+              <span className="text-white" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>ИВ</span>
             </div>
-            <span className="text-white" style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+            <span className="text-white" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
               softintelegi
             </span>
           </motion.div>
@@ -86,15 +86,19 @@ const Header = () => {
                   display: 'flex', 
                   alignItems: 'center', 
                   gap: '0.5rem',
-                  padding: '0.75rem 1.5rem',
-                  fontSize: '1rem',
-                  minHeight: '50px',
+                  padding: '0.5rem 1rem',
+                  fontSize: '0.9rem',
+                  minHeight: '40px',
                   position: 'relative',
                   overflow: 'hidden',
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)',
-                  borderRadius: '12px'
+                  borderRadius: '8px',
+                  color: '#ffffff',
+                  fontWeight: '600',
+                  textShadow: '0 1px 3px rgba(0, 0, 0, 0.8)',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
                 }}
               >
                 <span style={{ position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -119,13 +123,19 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="mobile-menu-btn text-white"
             style={{ 
-              fontSize: '1.5rem',
-              padding: '0.75rem',
-              minHeight: '50px',
-              minWidth: '50px',
+              fontSize: '1.2rem',
+              padding: '0.5rem',
+              minHeight: '40px',
+              minWidth: '40px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              borderRadius: '8px',
+              color: '#ffffff',
+              textShadow: '0 1px 3px rgba(0, 0, 0, 0.8)',
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
             }}
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -141,7 +151,7 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="mobile-menu"
-              style={{ marginTop: '1.5rem' }}
+              style={{ marginTop: '0.75rem' }}
             >
               {navItems.map((item, index) => (
                 <motion.button
@@ -160,20 +170,21 @@ const Header = () => {
                     display: 'flex', 
                     alignItems: 'center', 
                     gap: '0.75rem',
-                    padding: '1rem 1.5rem',
-                    borderRadius: '12px',
-                    minHeight: '60px',
-                    fontSize: '1rem',
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    padding: '0.75rem 1rem',
+                    borderRadius: '8px',
+                    minHeight: '45px',
+                    fontSize: '0.9rem',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
                     color: 'white',
                     transition: 'all 0.3s ease',
                     fontWeight: '600',
-                    textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)',
+                    textShadow: '0 1px 3px rgba(0, 0, 0, 0.8)',
                     backdropFilter: 'blur(10px)',
                     position: 'relative',
                     overflow: 'hidden',
-                    marginBottom: '0.5rem'
+                    marginBottom: '0.5rem',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
                   }}
                 >
                   <span style={{ position: 'relative', zIndex: 2, display: 'flex', alignItems: 'center', gap: '0.75rem' }}>

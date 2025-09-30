@@ -8,6 +8,22 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+}
+
+/* Prevent auto-scroll on page load */
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+}
+
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -20,6 +36,14 @@ body {
   min-height: 100vh;
   color: #ffffff;
   line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Prevent initial scroll */
+.App {
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Custom scrollbar */
@@ -1059,7 +1083,7 @@ header {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid transparent;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  min-height: 100px;
+  min-height: 70px;
   display: flex;
   align-items: center;
 }
@@ -1121,6 +1145,114 @@ header {
     animation: gradientShift 4s ease infinite;
     border-radius: 12px;
     overflow: hidden;
+  }
+
+  /* Improve grid layouts for mobile */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Better spacing for mobile */
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Improve table responsiveness */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Better button sizing for mobile */
+  .btn {
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  section {
+    padding: 1.5rem 0;
+  }
+
+  /* Make sure text is readable on very small screens */
+  .text-sm {
+    font-size: 0.8rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .text-xl {
+    font-size: 1.125rem;
+  }
+}
+
+/* Large screen improvements */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }
 

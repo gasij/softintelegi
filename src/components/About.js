@@ -90,14 +90,24 @@ const About = () => {
           <motion.h2
             variants={itemVariants}
             className="text-white"
-            style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem' }}
+            style={{ 
+              fontSize: 'clamp(2rem, 6vw, 3rem)', 
+              fontWeight: 'bold', 
+              marginBottom: '1.5rem',
+              lineHeight: '1.2'
+            }}
           >
             О <span className="gradient-text">себе</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-gray-300"
-            style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}
+            style={{ 
+              fontSize: 'clamp(1rem, 3vw, 1.25rem)', 
+              maxWidth: '48rem', 
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}
           >
             Я увлеченный разработчик с опытом создания современных веб-приложений
           </motion.p>

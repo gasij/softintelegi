@@ -160,14 +160,24 @@ const Projects = () => {
           <motion.h2
             variants={itemVariants}
             className="text-white"
-            style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem' }}
+            style={{ 
+              fontSize: 'clamp(2rem, 6vw, 3rem)', 
+              fontWeight: 'bold', 
+              marginBottom: '1.5rem',
+              lineHeight: '1.2'
+            }}
           >
             Мои <span className="gradient-text">проекты</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-gray-300"
-            style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto 2rem auto' }}
+            style={{ 
+              fontSize: 'clamp(1rem, 3vw, 1.25rem)', 
+              maxWidth: '48rem', 
+              margin: '0 auto 2rem auto',
+              padding: '0 1rem'
+            }}
           >
             Коллекция проектов, демонстрирующих мои навыки и опыт в разработке
           </motion.p>
@@ -175,7 +185,13 @@ const Projects = () => {
           {/* Filter Buttons */}
           <motion.div
             variants={itemVariants}
-            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}
+            style={{ 
+              display: 'flex', 
+              flexWrap: 'wrap', 
+              justifyContent: 'center', 
+              gap: '0.5rem',
+              padding: '0 1rem'
+            }}
           >
             {filters.map((filter) => (
               <motion.button
@@ -188,13 +204,13 @@ const Projects = () => {
                 onClick={() => setActiveFilter(filter.id)}
                 className={activeFilter === filter.id ? "btn btn-primary" : "btn btn-outline"}
                 style={{ 
-                  padding: '0.75rem 1.5rem',
+                  padding: '0.5rem 1rem',
                   borderRadius: '9999px',
                   fontWeight: '600',
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.875rem, 2.5vw, 1rem)',
                   position: 'relative',
                   overflow: 'hidden',
-                  minWidth: '140px',
+                  minWidth: '120px',
                   background: activeFilter === filter.id 
                     ? 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)'
                     : 'rgba(255, 255, 255, 0.05)',

@@ -99,14 +99,24 @@ const Skills = () => {
           <motion.h2
             variants={itemVariants}
             className="text-white"
-            style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1.5rem' }}
+            style={{ 
+              fontSize: 'clamp(2rem, 6vw, 3rem)', 
+              fontWeight: 'bold', 
+              marginBottom: '1.5rem',
+              lineHeight: '1.2'
+            }}
           >
             Мои <span className="gradient-text">навыки</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-gray-300"
-            style={{ fontSize: '1.25rem', maxWidth: '48rem', margin: '0 auto' }}
+            style={{ 
+              fontSize: 'clamp(1rem, 3vw, 1.25rem)', 
+              maxWidth: '48rem', 
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}
           >
             Технологии и инструменты, которые я использую для создания качественных решений
           </motion.p>
@@ -121,8 +131,12 @@ const Skills = () => {
           className="card"
           style={{ overflow: 'hidden' }}
         >
-          <div className="overflow-x-auto">
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div className="overflow-x-auto" style={{ maxWidth: '100%' }}>
+            <table style={{ 
+              width: '100%', 
+              borderCollapse: 'collapse',
+              minWidth: '600px'
+            }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.1)' }}>
                   <th className="text-white text-left" style={{ padding: '1rem', fontSize: '1.125rem', fontWeight: '600' }}>Технология</th>
