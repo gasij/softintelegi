@@ -173,7 +173,7 @@ const Contact = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="card"
+              className="glass-card contact-card"
             >
               <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Давайте поговорим</h3>
               <p className="text-gray-300" style={{ lineHeight: '1.6', marginBottom: '2rem' }}>
@@ -188,12 +188,11 @@ const Contact = () => {
                     href={info.link}
                     variants={cardVariants}
                     whileHover="hover"
-                    className="card"
+                    className="glass-card contact-info-item"
                     style={{ 
                       display: 'flex', 
                       alignItems: 'center', 
                       gap: '1rem', 
-                      padding: '1rem',
                       textDecoration: 'none'
                     }}
                   >
@@ -201,8 +200,8 @@ const Contact = () => {
                       <info.icon />
                     </div>
                     <div>
-                      <div className="text-white" style={{ fontWeight: '600' }}>{info.title}</div>
-                      <div className="text-gray-300">{info.value}</div>
+                      <h4 className="text-white" style={{ fontWeight: '600' }}>{info.title}</h4>
+                      <p className="text-gray-300">{info.value}</p>
                     </div>
                   </motion.a>
                 ))}
@@ -246,7 +245,7 @@ const Contact = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="card text-center"
+                  className="glass-card text-center"
                 >
                   <div className="text-white" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{stat.value}</div>
                   <div className="text-gray-300" style={{ fontSize: '0.875rem' }}>{stat.label}</div>
@@ -261,7 +260,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="card"
+            className="glass-card"
           >
             <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Отправить сообщение</h3>
             

@@ -128,11 +128,11 @@ const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="card"
+          className="glass-card"
           style={{ overflow: 'hidden' }}
         >
           <div className="overflow-x-auto" style={{ maxWidth: '100%' }}>
-            <table style={{ 
+            <table className="skills-table" style={{ 
               width: '100%', 
               borderCollapse: 'collapse',
               minWidth: '600px'
@@ -217,7 +217,7 @@ const Skills = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="card"
+            className="glass-card"
             style={{ 
               maxWidth: '56rem', 
               margin: '0 auto',

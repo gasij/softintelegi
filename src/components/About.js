@@ -124,7 +124,7 @@ const About = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="card"
+              className="glass-card"
             >
               <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Мой путь в разработке</h3>
               <p className="text-gray-300" style={{ lineHeight: '1.6', marginBottom: '1.5rem' }}>
@@ -140,7 +140,7 @@ const About = () => {
 
             <motion.div
               variants={itemVariants}
-              className="card"
+              className="glass-card"
             >
               <h3 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Мои принципы</h3>
               <ul className="text-gray-300" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

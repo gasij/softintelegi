@@ -258,7 +258,7 @@ const Projects = () => {
                   variants={cardVariants}
                   whileHover="hover"
                   layout
-                  className="glass rounded-2xl overflow-hidden group"
+                  className="glass-strong rounded-2xl overflow-hidden group"
                 >
                   {/* Project Image */}
                   <div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600 overflow-hidden">
@@ -345,7 +345,7 @@ const Projects = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="card"
+            className="glass-card"
             style={{ 
               maxWidth: '32rem', 
               margin: '0 auto',
